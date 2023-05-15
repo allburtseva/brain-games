@@ -2,9 +2,9 @@
 
 import readlineSync from 'readline-sync';
 
-const getName = () => readlineSync.question('May I have your name? ');
-
 console.log('Welcome to the Brain Games!');
+
+const getName = () => readlineSync.question('May I have your name? ');
 
 const userName = getName();
 
@@ -13,8 +13,6 @@ const greeting = () => {
 };
 
 greeting();
-
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const getRandomNumber = () => Math.round(Math.random() * 100);
 
@@ -33,6 +31,7 @@ const startRound = () => {
 };
 
 const startGame = () => {
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const isCorrect = startRound();
     if (!isCorrect) {
