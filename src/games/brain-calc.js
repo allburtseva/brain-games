@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 import {
-  getName,
   compareAnswers,
+  getRandomNumber,
+  startGame,
 } from '../index.js';
 
 const operators = ['+', '-', '*'];
 const getRandomItem = (array) => array[Math.floor(Math.random() * array.length)];
-const getRandomNumber = () => Math.round(Math.random() * 50);
 
 const getResultOfExpression = (first, second, operator) => {
   switch (operator) {
@@ -36,19 +36,8 @@ const startRound = () => {
   return false;
 };
 
-const startGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = getName();
-  console.log(`Hello, ${userName}!`);
-  console.log('What is the result of the expression?');
-  for (let i = 0; i < 3; i += 1) {
-    const isCorrect = startRound();
-    if (!isCorrect) {
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+const runGame = () => {
+  startGame(3, startRound, 'What is the result of the expression?');
 };
 
-export default startGame;
+export default runGame;
