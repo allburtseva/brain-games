@@ -7,7 +7,7 @@
 ## Description
 These a several console games that are simple mathematical tasks
 ## Games list
-* brain-even - answer if the number is even or not.
+* brain-even - answer if the number is even or not
 * brain-calc - find the result of simple math expression
 * brain-gcd - find the greatest common divisor of two given numbers
 * brain-progression - find a missed number in the arithmetic progression
@@ -15,7 +15,11 @@ These a several console games that are simple mathematical tasks
 
 ## ASCIINEMA
 [brain-even demo](https://asciinema.org/a/sNkZyxBLw7veYKuDCf5wAiMy9/ "brain-even")
+
 [brain-calc demo](https://asciinema.org/a/3TvCcCE3TCZQzuAYM67KmAfag/ "brain-calc")
+
 [brain-gcd demo](https://asciinema.org/a/zfoGifePWsxDx0syitK9vZswf/ "brain-gcd")
+
 [brain-progression demo](https://asciinema.org/a/RKOqELYzec7gaEn50TxjDYcDH/ "brain-progression")
+
 [brain-prime demo](https://asciinema.org/a/yn34TpRAjqh42F8koMZZBJR7p/ "brain-prime")
