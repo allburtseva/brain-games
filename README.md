@@ -23,3 +23,14 @@ These a several console games that are simple mathematical tasks
 [brain-progression demo](https://asciinema.org/a/RKOqELYzec7gaEn50TxjDYcDH/ "brain-progression")
 
 [brain-prime demo](https://asciinema.org/a/yn34TpRAjqh42F8koMZZBJR7p/ "brain-prime")
+
+## Instalation
+You need to clone this repository and run these commands:
+  make install
+  npm link
+## Run games
+`brain-even` - run brain-even
+`brain-calc` - run brain-calc 
+`brain-gcd` - run brain-gcd
+`brain-progression` - run brain-progression
+`brain-prime` - run brain-prime
