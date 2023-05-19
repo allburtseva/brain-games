@@ -3,8 +3,10 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/5268022f53e6d12a3aa7/maintainability)](https://codeclimate.com/github/allburtseva/frontend-project-44/maintainability)
 
-[brain-even](https://asciinema.org/a/sNkZyxBLw7veYKuDCf5wAiMy9/ "brain-even")
+[brain-even demo](https://asciinema.org/a/sNkZyxBLw7veYKuDCf5wAiMy9/ "brain-even")
 
-[brain-calc](https://asciinema.org/a/3TvCcCE3TCZQzuAYM67KmAfag/ "brain-calc")
+[brain-calc demo](https://asciinema.org/a/3TvCcCE3TCZQzuAYM67KmAfag/ "brain-calc")
 
-[brain-gcd](https://asciinema.org/a/zfoGifePWsxDx0syitK9vZswf/ "brain-gcd")
+[brain-gcd demo](https://asciinema.org/a/zfoGifePWsxDx0syitK9vZswf/ "brain-gcd")
+
+[brain-progression demo](https://asciinema.org/a/RKOqELYzec7gaEn50TxjDYcDH/ "brain-progression")
