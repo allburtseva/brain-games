@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
 import {
   compareAnswers,
   getRandomNum,
   startGame,
+  getAnswer,
 } from '../index.js';
 
 const getGreatestCommonDivisor = (x, y) => {
@@ -15,7 +15,7 @@ const startRound = () => {
   const firstRandomNum = getRandomNum(1, 50);
   const secondRandomNum = getRandomNum(1, 50);
   console.log(`Question: ${firstRandomNum} ${secondRandomNum}`);
-  const userAnswer = Number(readlineSync.question('Your answer: '));
+  const userAnswer = Number(getAnswer());
   const correctAnswer = getGreatestCommonDivisor(firstRandomNum, secondRandomNum);
   if (compareAnswers(userAnswer, correctAnswer)) {
     console.log('Correct!');

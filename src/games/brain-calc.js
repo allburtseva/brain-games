@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
 import {
   compareAnswers,
   getRandomNum,
   startGame,
+  getAnswer,
 } from '../index.js';
 
 const operators = ['+', '-', '*'];
@@ -26,7 +26,7 @@ const startRound = () => {
   const secondRandomNum = getRandomNum(1, 30);
   const operator = getRandomItem(operators);
   console.log(`Question: ${firstRandomNum} ${operator} ${secondRandomNum}`);
-  const userAnswer = Number(readlineSync.question('Your answer: '));
+  const userAnswer = Number(getAnswer());
   const correctAnswer = calculate(firstRandomNum, secondRandomNum, operator);
   if (compareAnswers(userAnswer, correctAnswer)) {
     console.log('Correct!');

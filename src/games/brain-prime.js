@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
 import {
   compareAnswers,
   getRandomNum,
   startGame,
+  getAnswer,
 } from '../index.js';
 
 const isPrime = (number) => {
@@ -17,7 +17,7 @@ const isPrime = (number) => {
 const startRound = () => {
   const number = getRandomNum(2, 100);
   console.log(`Question: ${number}`);
-  const userAnswer = readlineSync.question('Your answer: ');
+  const userAnswer = getAnswer();
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   if (compareAnswers(userAnswer, correctAnswer)) {
     console.log('Correct!');

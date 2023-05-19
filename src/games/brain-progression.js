@@ -1,6 +1,6 @@
-import readlineSync from 'readline-sync';
 import {
   compareAnswers,
+  getAnswer,
   getRandomNum,
   startGame,
 } from '../index.js';
@@ -24,7 +24,7 @@ const startRound = () => {
   const newProgression = progression;
   newProgression[position] = '..';
   console.log(`Question: ${newProgression.join(' ')}`);
-  const userAnswer = Number(readlineSync.question('Your answer: '));
+  const userAnswer = Number(getAnswer());
   if (compareAnswers(userAnswer, correctAnswer)) {
     console.log('Correct!');
     return true;

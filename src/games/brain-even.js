@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
 import {
   compareAnswers,
   getRandomNum,
   startGame,
+  getAnswer,
 } from '../index.js';
 
 const isEvenNum = (number) => number % 2 === 0;
@@ -10,8 +10,8 @@ const isEvenNum = (number) => number % 2 === 0;
 const startRound = () => {
   const randomNum = getRandomNum(0, 100);
   console.log(`Question: ${randomNum}`);
-  const userAnswer = readlineSync.question('Your answer: ');
   const correctAnswer = isEvenNum(randomNum) ? 'yes' : 'no';
+  const userAnswer = getAnswer();
   if (compareAnswers(userAnswer, correctAnswer)) {
     console.log('Correct!');
     return true;

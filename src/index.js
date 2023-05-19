@@ -2,6 +2,8 @@ import readlineSync from 'readline-sync';
 
 const getName = () => readlineSync.question('May I have your name? ');
 
+export const getAnswer = () => readlineSync.question('Your answer: ');
+
 export const compareAnswers = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
 
 export const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min)) + min;
