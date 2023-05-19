@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
 import {
   compareAnswers,
-  getRandomNumber,
+  getRandomNum,
   startGame,
 } from '../index.js';
 
 const operators = ['+', '-', '*'];
 const getRandomItem = (array) => array[Math.floor(Math.random() * array.length)];
 
-const getResultOfExpression = (first, second, operator) => {
+const calculate = (first, second, operator) => {
   switch (operator) {
     case '+':
       return first + second;
@@ -22,13 +22,12 @@ const getResultOfExpression = (first, second, operator) => {
 };
 
 const startRound = () => {
-  const firstRandomNumber = getRandomNumber();
-  const secondRandomNumber = getRandomNumber();
-  const randomOperator = getRandomItem(operators);
-  console.log(`Question: ${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`);
+  const firstRandomNum = getRandomNum(1, 30);
+  const secondRandomNum = getRandomNum(1, 30);
+  const operator = getRandomItem(operators);
+  console.log(`Question: ${firstRandomNum} ${operator} ${secondRandomNum}`);
   const userAnswer = Number(readlineSync.question('Your answer: '));
-  // eslint-disable-next-line max-len
-  const correctAnswer = getResultOfExpression(firstRandomNumber, secondRandomNumber, randomOperator);
+  const correctAnswer = calculate(firstRandomNum, secondRandomNum, operator);
   if (compareAnswers(userAnswer, correctAnswer)) {
     console.log('Correct!');
     return true;
@@ -37,7 +36,7 @@ const startRound = () => {
 };
 
 const runGame = () => {
-  startGame(3, startRound, 'What is the result of the expression?');
+  startGame(startRound, 'What is the result of the expression?');
 };
 
 export default runGame;

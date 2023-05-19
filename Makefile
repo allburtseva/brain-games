@@ -10,6 +10,9 @@ brain-calc:
 brain-gcd:
 	node bin/brain-gcd.js
 
+brain-progression:
+	node bin/brain-progression.js
+
 brain-games:
 	node bin/brain-games.js
 

@@ -1,22 +1,22 @@
 import readlineSync from 'readline-sync';
 import {
   compareAnswers,
-  getRandomNumber,
+  getRandomNum,
   startGame,
 } from '../index.js';
 
-const getGreatestCommonDividor = (x, y) => {
-  if (y > x) return getGreatestCommonDividor(y, x);
+const getGreatestCommonDivisor = (x, y) => {
+  if (y > x) return getGreatestCommonDivisor(y, x);
   if (!y) return x;
-  return getGreatestCommonDividor(y, x % y);
+  return getGreatestCommonDivisor(y, x % y);
 };
 
 const startRound = () => {
-  const firstRandomNumber = getRandomNumber();
-  const secondRandomNumber = getRandomNumber();
-  console.log(`Question: ${firstRandomNumber} ${secondRandomNumber}`);
+  const firstRandomNum = getRandomNum(1, 50);
+  const secondRandomNum = getRandomNum(1, 50);
+  console.log(`Question: ${firstRandomNum} ${secondRandomNum}`);
   const userAnswer = Number(readlineSync.question('Your answer: '));
-  const correctAnswer = getGreatestCommonDividor(firstRandomNumber, secondRandomNumber);
+  const correctAnswer = getGreatestCommonDivisor(firstRandomNum, secondRandomNum);
   if (compareAnswers(userAnswer, correctAnswer)) {
     console.log('Correct!');
     return true;
@@ -25,7 +25,7 @@ const startRound = () => {
 };
 
 const runGame = () => {
-  startGame(3, startRound, 'Find the greatest common divisor of given numbers.');
+  startGame(startRound, 'Find the greatest common divisor of given numbers.');
 };
 
 export default runGame;

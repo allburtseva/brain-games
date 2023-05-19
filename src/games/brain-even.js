@@ -1,17 +1,17 @@
 import readlineSync from 'readline-sync';
 import {
   compareAnswers,
-  getRandomNumber,
+  getRandomNum,
   startGame,
 } from '../index.js';
 
-const isEvenNumber = (number) => number % 2 === 0;
+const isEvenNum = (number) => number % 2 === 0;
 
 const startRound = () => {
-  const randomNumber = getRandomNumber();
-  console.log(`Question: ${randomNumber}`);
+  const randomNum = getRandomNum(0, 100);
+  console.log(`Question: ${randomNum}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  const correctAnswer = isEvenNumber(randomNumber) ? 'yes' : 'no';
+  const correctAnswer = isEvenNum(randomNum) ? 'yes' : 'no';
   if (compareAnswers(userAnswer, correctAnswer)) {
     console.log('Correct!');
     return true;
@@ -20,7 +20,7 @@ const startRound = () => {
 };
 
 const runGame = () => {
-  startGame(3, startRound, 'Answer "yes" if the number is even, otherwise answer "no".');
+  startGame(startRound, 'Answer "yes" if the number is even, otherwise answer "no".');
 };
 
 export default runGame;
