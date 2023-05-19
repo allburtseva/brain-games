@@ -27,9 +27,9 @@ These a several console games that are simple mathematical tasks
 ## Instalation
 You need to clone this repository and run these commands:
 
-  make install
+`make install`
   
-  npm link
+`npm link`
   
 ## Run games
 
