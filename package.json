@@ -11,13 +11,12 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allburtseva/frontend-project-44.git"
+    "url": "https://github.com/allburtseva/frontend-project-44.git"
   },
   "author": "Alexandra Burtseva",
   "license": "ISC",
