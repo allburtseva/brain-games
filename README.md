@@ -26,11 +26,20 @@ These a several console games that are simple mathematical tasks
 
 ## Instalation
 You need to clone this repository and run these commands:
+
   make install
+  
   npm link
+  
 ## Run games
+
 `brain-even` - run brain-even
+
 `brain-calc` - run brain-calc 
+
 `brain-gcd` - run brain-gcd
+
 `brain-progression` - run brain-progression
+
 `brain-prime` - run brain-prime
+
