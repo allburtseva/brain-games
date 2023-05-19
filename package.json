@@ -14,8 +14,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allburtseva/frontend-project-44.git"
+  },
+  "author": "Alexandra Burtseva",
   "license": "ISC",
+  "homepage": "https://github.com/allburtseva/frontend-project-44#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
