@@ -1,31 +1,27 @@
 import {
-  compareAnswers,
   getRandomNum,
   startGame,
-  getAnswer,
-} from '../index.js';
+  } from '../index.js';
 
-const getGreatestCommonDivisor = (x, y) => {
-  if (y > x) return getGreatestCommonDivisor(y, x);
-  if (!y) return x;
-  return getGreatestCommonDivisor(y, x % y);
+const task = 'Find the greatest common divisor of given numbers.';
+
+const min = 1;
+const max = 50;
+
+const getGreatestCommonDivisor = (num1, num2) => {
+  if (num2 > num1) return getGreatestCommonDivisor(num2, num1);
+  if (!num2) return num1;
+  return getGreatestCommonDivisor(num2, num1 % num2);
 };
 
-const startRound = () => {
-  const firstRandomNum = getRandomNum(1, 50);
-  const secondRandomNum = getRandomNum(1, 50);
-  console.log(`Question: ${firstRandomNum} ${secondRandomNum}`);
-  const userAnswer = Number(getAnswer());
-  const correctAnswer = getGreatestCommonDivisor(firstRandomNum, secondRandomNum);
-  if (compareAnswers(userAnswer, correctAnswer)) {
-    console.log('Correct!');
-    return true;
-  } console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  return false;
+const getGameData = () => {
+  const firstNum = getRandomNum(min, max);
+  const secondNum = getRandomNum(min, max);
+  const question = `${firstNum} ${secondNum}`;
+  const correctAnswer = String(getGreatestCommonDivisor(firstNum, secondNum));
+  return [question, correctAnswer];
 };
 
-const runGame = () => {
-  startGame(startRound, 'Find the greatest common divisor of given numbers.');
+export default () => {
+  startGame(task, getGameData);
 };
-
-export default runGame;
