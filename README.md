@@ -24,6 +24,12 @@ These a several console games that are simple mathematical tasks
 
 [brain-prime demo](https://asciinema.org/a/yn34TpRAjqh42F8koMZZBJR7p/ "brain-prime")
 
+## Minimum system requirements
+* Windows 10 with WSL 
+* any current Linux distributive
+* Mac OS
+* Installed Node.js
+
 ## Instalation
 You need to clone this repository and run these commands:
 
