@@ -1,12 +1,20 @@
 import {
-  compareAnswers,
   getRandomNum,
   startGame,
-  getAnswer,
-} from '../index.js';
+  } from '../index.js';
+
+const task = 'What is the result of the expression?';
+
+const min = 1;
+const max = 30;
 
 const operators = ['+', '-', '*'];
-const getRandomItem = (array) => array[Math.floor(Math.random() * array.length)];
+
+const getOperator = (operators) => {
+  const maxIndex = operators.length - 1;
+  const index = getRandomNum(0, maxIndex);
+  return operators[index];
+};
 
 const calculate = (first, second, operator) => {
   switch (operator) {
@@ -17,26 +25,19 @@ const calculate = (first, second, operator) => {
     case '*':
       return first * second;
     default:
-      return 'Something is wrong!';
+      return null;
   }
 };
 
-const startRound = () => {
-  const firstRandomNum = getRandomNum(1, 30);
-  const secondRandomNum = getRandomNum(1, 30);
-  const operator = getRandomItem(operators);
-  console.log(`Question: ${firstRandomNum} ${operator} ${secondRandomNum}`);
-  const userAnswer = Number(getAnswer());
-  const correctAnswer = calculate(firstRandomNum, secondRandomNum, operator);
-  if (compareAnswers(userAnswer, correctAnswer)) {
-    console.log('Correct!');
-    return true;
-  } console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  return false;
+const getGameData = () => {
+  const firstNum = getRandomNum(min, max);
+  const secondNum = getRandomNum(min, max);
+  const operator = getOperator(operators);
+  const question = `${firstNum} ${operator} ${secondNum}`;
+  const correctAnswer = String(calculate(firstNum, secondNum, operator));
+  return [question, correctAnswer];
 };
 
-const runGame = () => {
-  startGame(startRound, 'What is the result of the expression?');
+export default () => {
+  startGame(task, getGameData);
 };
-
-export default runGame;
