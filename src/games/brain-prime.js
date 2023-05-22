@@ -1,7 +1,7 @@
 import {
   getRandomNum,
   startGame,
-  } from '../index.js';
+} from '../index.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

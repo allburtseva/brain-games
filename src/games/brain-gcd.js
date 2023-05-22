@@ -1,7 +1,7 @@
 import {
   getRandomNum,
   startGame,
-  } from '../index.js';
+} from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 

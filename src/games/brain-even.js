@@ -1,7 +1,7 @@
 import {
   getRandomNum,
   startGame,
-  } from '../index.js';
+} from '../index.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 

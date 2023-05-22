@@ -1,7 +1,7 @@
 import {
   getRandomNum,
   startGame,
-  } from '../index.js';
+} from '../index.js';
 
 const task = 'What number is missing in the progression?';
 

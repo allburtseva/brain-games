@@ -1,7 +1,7 @@
 import {
   getRandomNum,
   startGame,
-  } from '../index.js';
+} from '../index.js';
 
 const task = 'What is the result of the expression?';
 
@@ -10,10 +10,10 @@ const max = 30;
 
 const operators = ['+', '-', '*'];
 
-const getOperator = (operators) => {
+const getRandomItem = (items) => {
   const maxIndex = operators.length - 1;
   const index = getRandomNum(0, maxIndex);
-  return operators[index];
+  return items[index];
 };
 
 const calculate = (first, second, operator) => {
@@ -32,7 +32,7 @@ const calculate = (first, second, operator) => {
 const getGameData = () => {
   const firstNum = getRandomNum(min, max);
   const secondNum = getRandomNum(min, max);
-  const operator = getOperator(operators);
+  const operator = getRandomItem(operators);
   const question = `${firstNum} ${operator} ${secondNum}`;
   const correctAnswer = String(calculate(firstNum, secondNum, operator));
   return [question, correctAnswer];
