@@ -1,7 +1,5 @@
-import {
-  getRandomNum,
-  startGame,
-} from '../index.js';
+import startGame from '../index.js';
+import getRandomNum from '../random.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,9 +9,8 @@ const max = 100;
 const isEvenNum = (number) => number % 2 === 0;
 
 const getGameData = () => {
-  const randomNum = getRandomNum(min, max);
-  const question = randomNum;
-  const correctAnswer = isEvenNum(randomNum) ? 'yes' : 'no';
+  const question = getRandomNum(min, max);
+  const correctAnswer = isEvenNum(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 

@@ -1,7 +1,5 @@
-import {
-  getRandomNum,
-  startGame,
-} from '../index.js';
+import startGame from '../index.js';
+import getRandomNum from '../random.js';
 
 const task = 'What is the result of the expression?';
 
@@ -11,7 +9,7 @@ const max = 30;
 const operators = ['+', '-', '*'];
 
 const getRandomItem = (items) => {
-  const maxIndex = operators.length - 1;
+  const maxIndex = items.length - 1;
   const index = getRandomNum(0, maxIndex);
   return items[index];
 };
@@ -25,6 +23,7 @@ const calculate = (first, second, operator) => {
     case '*':
       return first * second;
     default:
+      console.log('Calculation error!');
       return null;
   }
 };
